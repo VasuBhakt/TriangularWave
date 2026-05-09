@@ -1,6 +1,6 @@
 # 8051 Triangular Wave Generator
 
-Variable-frequency triangular wave generator on the AT89S52 microcontroller — 16-bit software division, Timer0 ISR waveform output, and UART-based runtime frequency control.
+Variable-frequency triangular wave generator on the AT89S52 microcontroller featuring 16-bit software division, Timer0 ISR waveform output, and UART-based runtime frequency control.
 
 ## Overview
 
@@ -18,7 +18,7 @@ Generates a ±2.5V triangular waveform at frequencies between 100Hz and 500Hz us
 
 **Waveform generation**
 
-The DAC value is stepped by 5 on every Timer0 overflow — up from 0 to 255, then back down. This gives 51 points per half-cycle (255/5 = 51). The `cycle` bit in internal RAM tracks direction.
+The DAC value is stepped by 5 on every Timer0 overflow, from 0 to 255, then back down. This gives 51 points per half-cycle (255/5 = 51). The `cycle` bit in internal RAM tracks direction.
 
 **Variable frequency**
 
